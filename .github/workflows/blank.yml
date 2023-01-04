@@ -33,7 +33,8 @@ jobs:
          # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv, poetry.
          cache: pip # optional
          
-         run: pip install -r requirements.txt
+      - name: install package
+        run: pip install -r requirements.txt
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
