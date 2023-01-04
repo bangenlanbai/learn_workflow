@@ -21,7 +21,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: git pull
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v3
       
       - name: Setup Python
@@ -32,9 +32,8 @@ jobs:
          # File containing the Python version to use. Example: .python-version
          # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv, poetry.
          cache: pip # optional
-         # The target architecture (x86, x64) of the Python or PyPy interpreter.
          
-
+         run: pip install -r requirements.txt
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
