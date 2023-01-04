@@ -34,7 +34,7 @@ jobs:
          cache: pip # optional
          
       - name: install package
-        run: pip install -r requirements.txt
+        run: pip install -r requirements.txt --use-pep517
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
