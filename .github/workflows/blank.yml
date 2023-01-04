@@ -20,6 +20,10 @@ jobs:
     # The type of runner that the job will run on
     runs-on: windows-latest
     steps:
+      - name: git pull
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        uses: actions/checkout@v3
+      
       - name: Setup Python
         uses: actions/setup-python@v4.4.0
         with:
@@ -30,8 +34,7 @@ jobs:
          cache: pip # optional
          # The target architecture (x86, x64) of the Python or PyPy interpreter.
          
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
